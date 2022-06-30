@@ -104,7 +104,7 @@ func GetCiCommand() *cobra.Command {
 func generateMarkdown(cmd *cobra.Command) (md string) {
 	md += generateMarkdownTree(cmd)
 	md += "\n\n---\n"
-	md += "> **Documentation automatically generated with [PTerm](https://github.com/pterm/cli-template) on " + time.Now().Format("02 January 2006") + "**\n"
+	md += "> **Documentation automatically generated with [PTerm](https://github.com/x0f5c3/cli-template) on " + time.Now().Format("02 January 2006") + "**\n"
 
 	return
 }
