@@ -61,6 +61,15 @@ func getRepoPath() string {
 	return AppInfo.Username + "/" + AppInfo.Reponame
 }
 
+func CheckUpdateExit() {
+	err := CheckForUpdates()
+	pterm.Error.WithFatal(true).PrintOnError(err)
+}
+
+func CheckErr(err error) {
+	pterm.Error.WithFatal(true).PrintOnError(err)
+}
+
 // CheckForUpdates checks if a new version of your application is pushed, and notifies the user, if DisableUpdateChecking is true.
 func CheckForUpdates() error {
 	if !DisableUpdateChecking && AppInfo.Username != "" && AppInfo.Reponame != "" {
