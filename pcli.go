@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/tidwall/gjson"
+	"github.com/x0f5c3/pterm"
 )
 
 var rootCmd *cobra.Command
@@ -45,11 +45,11 @@ func Setup() {
 	rootCmd.SetErr(Err())
 }
 
-// SetRepo must be set to your repository path (eg. pterm/cli-template).
+// SetRepo must be set to your repository path (eg. x0f5c3/cli-template).
 func SetRepo(repo string) error {
 	parts := strings.Split(repo, "/")
 	if len(parts) != 2 {
-		return errors.New("repo must be set in this pattern: username/reponame, eg.: pterm/cli-template")
+		return errors.New("repo must be set in this pattern: username/reponame, eg.: x0f5c3/cli-template")
 	}
 	AppInfo.Username = parts[0]
 	AppInfo.Reponame = parts[1]
@@ -105,7 +105,7 @@ func CheckForUpdates() error {
 	return nil
 }
 
-// GetCiCommand returns a custom crafted CI command. This must be used when using https://github.com/pterm/cli-template.
+// GetCiCommand returns a custom crafted CI command. This must be used when using https://github.com/x0f5c3/cli-template.
 func GetCiCommand() *cobra.Command {
 	return ptermCICmd
 }

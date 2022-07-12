@@ -1,8 +1,8 @@
 package pcli
 
 import (
-	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
+	"github.com/x0f5c3/pterm"
 )
 
 // generateTitleString generates a pretty looking title string.

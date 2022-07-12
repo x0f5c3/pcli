@@ -4,9 +4,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
+	"github.com/x0f5c3/pterm"
 )
 
 // HelpFunc is a drop in replacement for spf13/cobra `HelpFunc`

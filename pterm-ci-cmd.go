@@ -10,8 +10,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
+	"github.com/x0f5c3/pterm"
 )
 
 // ptermCICmd represents the ptermCi command
